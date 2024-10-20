@@ -23,3 +23,14 @@ class Solution:
                     return sorted([i, j])
                 j = j - 1
             i = i + 1
+
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+        res = {}
+        for i in strs:
+            original = i
+            ref = ''.join(sorted(i))
+            if ref in res:
+                res[ref].append(original)
+            else:
+                res[ref] = [original]
+        return list(res.values())

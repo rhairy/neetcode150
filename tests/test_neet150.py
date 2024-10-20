@@ -17,3 +17,8 @@ def test_isAnagram(solution_object):
 def test_twoSum(solution_object):
     assert solution_object.twoSum([3,4,5,6], 7) == [0,1]
     assert solution_object.twoSum([4,5,6], 10) == [0,2]
+
+def test_groupAnagrams(solution_object):
+    assert solution_object.groupAnagrams(sorted(["act","pots","tops","cat","stop","hat"])) == sorted([["hat"],["act", "cat"],sorted(["stop", "pots", "tops"])])
+    assert solution_object.groupAnagrams(["x"]) == [["x"]]
+    assert solution_object.groupAnagrams([""]) == [[""]]
