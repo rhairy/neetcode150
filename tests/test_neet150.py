@@ -13,3 +13,7 @@ def test_hasDuplicate(solution_object):
 def test_isAnagram(solution_object):
     assert solution_object.isAnagram("racecar", "carrace") == True
     assert solution_object.isAnagram("jar", "jam") == False
+
+def test_twoSum(solution_object):
+    assert solution_object.twoSum([3,4,5,6], 7) == [0,1]
+    assert solution_object.twoSum([4,5,6], 10) == [0,2]

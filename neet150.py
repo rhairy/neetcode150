@@ -13,3 +13,13 @@ class Solution:
             return True
         else:
             return False
+
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        i = 1
+        while i < len(nums):
+            j = i - 1
+            while j >= 0:
+                if nums[i] + nums[j] == target:
+                    return sorted([i, j])
+                j = j - 1
+            i = i + 1
