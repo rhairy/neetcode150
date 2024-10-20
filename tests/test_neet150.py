@@ -22,3 +22,7 @@ def test_groupAnagrams(solution_object):
     assert solution_object.groupAnagrams(sorted(["act","pots","tops","cat","stop","hat"])) == sorted([["hat"],["act", "cat"],sorted(["stop", "pots", "tops"])])
     assert solution_object.groupAnagrams(["x"]) == [["x"]]
     assert solution_object.groupAnagrams([""]) == [[""]]
+
+def test_topKFrequent(solution_object):
+    assert solution_object.topKFrequent([1,2,2,3,3,3], 2) == [3,2]
+    assert solution_object.topKFrequent([7,7], 1) == [7]
